@@ -1,12 +1,55 @@
-h1{
-	background-color: blue;
-	font-family: Arial;
+body{
+	background-color: black;
+	color: white;
+	margin: 2.5%;
 }
-table, td, th{
-	border: 1px solid black;
-	text-align: center;
+h1{
+	background-color: #1F87EB;
+	padding: 30px;
+	padding-left: 60px;
+	margin-bottom: 0px;
+}
+table,th,td{
+	border:1px solid black;
+	border-collapse: collapse;
+}
+table{
+	position: relative;
+	padding-right: 4%;
+	padding-left:4%;
+	left: 25%;
+}
+input{
+	position: relative;
+	display: block;
+	width:80%;
+	align-self: center;
+	left:10%;
+}
+button{
+	margin-top: 1rem;
+}
+li{
+	text-align: left;
+	list-style-type: none;
+	padding-left: 1rem;
+	font-size: 1.5rem;
+	color: white;
+	font-family: sans;
+}
+.links{
+	background-color: blue;
+	width: 30%;
+}
+.usuarios,.livros{
+	width: 35%;
+	border:1px solid black;
 	border-collapse: collapse;
 }
 .mainflex{
 	display: flex;
+	background-color: white;
+	color: black;
+	flex: 0 0 100%;
+	align-self: center;
 }
