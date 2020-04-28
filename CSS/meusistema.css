@@ -18,6 +18,7 @@ table,th,td{
 }
 table{
 	margin-top: 40px;
+	margin-bottom: 10px;
 	position: relative;
 	padding-right: 4%;
 	padding-left:4%;
@@ -54,7 +55,7 @@ li{
 	font-family: sans;
 }
 .links{
-	background-color: blue;
+	background-color: darkblue;
 	width: 30%;
 }
 .usuarios,.livros{
@@ -70,5 +71,5 @@ li{
 	color: black;
 	flex: 0 0 100%;
 	align-self: stretch;
-	height: 70vh;
+	min-height: 70vh;
 }
