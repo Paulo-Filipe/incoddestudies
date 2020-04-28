@@ -16,8 +16,8 @@
 			</ul>
 			</div>
 			<div class="usuarios">
-				<input type="text" name="cadastrarNome">
-				<button>Criar</button>
+				<input type="text" id="cadastrarNome" value="Nome Completo">
+				<button id="createName" onclick="addName()">Criar</button>
 				<table>
 					<thead>
 						<tr>
@@ -25,33 +25,14 @@
 							<th>Usuário</th>
 						</tr>
 					</thead>
-					<tbody>
-						<tr>
-							<td>&nbsp</td>
-							<td>&nbsp</td>
-						</tr>
-						<tr>
-							<td>&nbsp</td>
-							<td>&nbsp</td>
-						</tr>
-						<tr>
-							<td>&nbsp</td>
-							<td>&nbsp</td>
-						</tr>
-						<tr>
-							<td>&nbsp</td>
-							<td>&nbsp</td>
-						</tr>
-						<tr>
-							<td>&nbsp</td>
-							<td>&nbsp</td>
-						</tr>
+					<tbody id="userTable">
+						
 					</tbody>
 				</table>
 			</div>
 			<div class="livros">
-				<input type="text" name="cadastrarNome">
-				<button>Criar</button>
+				<input type="text" id="cadastrarLivro" value ="Livro">
+				<button id="createBook" onclick="addBook()">Criar</button>
 				<table>
 					<thead>
 						<tr>
@@ -59,27 +40,8 @@
 							<th>Livro</th>
 						</tr>
 					</thead>
-					<tbody>
-						<tr>
-							<td>&nbsp</td>
-							<td>&nbsp</td>
-						</tr>
-						<tr>
-							<td>&nbsp</td>
-							<td>&nbsp</td>
-						</tr>
-						<tr>
-							<td>&nbsp</td>
-							<td>&nbsp</td>
-						</tr>
-						<tr>
-							<td>&nbsp</td>
-							<td>&nbsp</td>
-						</tr>
-						<tr>
-							<td>&nbsp</td>
-							<td>&nbsp</td>
-						</tr>
+					<tbody id="bookTable">
+						
 					</tbody>
 				</table>
 			</div>
