@@ -38,3 +38,19 @@ function addBook(){
 		document.querySelector('#cadastrarLivro').value = "";
 	}
 }
+function showBooks(){
+	let show = document.querySelector('.livros').style.display;
+	if( show == "none"){
+	 document.querySelector('.livros').style.display= "block";
+	} else{
+		document.querySelector('.livros').style.display = "none";
+	}
+}
+function showUsers(){
+	let show = document.querySelector('.usuarios').style.display;
+	if (show == "none"){
+		document.querySelector('.usuarios').style.display = "block";
+	} else{
+		document.querySelector('.usuarios').style.display = "none";
+	}
+}

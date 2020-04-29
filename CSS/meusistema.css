@@ -56,12 +56,17 @@ li{
 }
 .links{
 	background-color: darkblue;
-	width: 30%;
+	width: 20%;
 }
 .usuarios,.livros{
-	width: 35%;
+	width: 40%;
 	border:1px solid black;
 	border-collapse: collapse;
+	display: none;
+}
+a:hover, button:hover{
+	text-decoration: underline;
+	cursor: pointer;
 }
 .mainflex{
 	display: flex;
