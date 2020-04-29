@@ -42,19 +42,23 @@ function showBooks(){
 	let show = document.querySelector('.livros').style.visibility;
 	if(show == "initial"){
 		document.querySelector('.livros').style.visibility = "visible";
+		document.querySelector('.usuarios').style.visibility = "hidden";
 	} else if (show == "visible"){
 		document.querySelector('.livros').style.visibility = "hidden";
 	} else{
 		document.querySelector('.livros').style.visibility = "visible";
+		document.querySelector('.usuarios').style.visibility = "hidden";
 	}
 }
 function showUsers(){
 	let show = document.querySelector('.usuarios').style.visibility;
 	if (show == "initial"){
 		document.querySelector('.usuarios').style.visibility = "visible";
+		document.querySelector('.livros').style.visibility = "hidden";
 	} else if (show == "visible"){
 		document.querySelector('.usuarios').style.visibility = "hidden";
 	} else {
 		document.querySelector('.usuarios').style.visibility = "visible";
+		document.querySelector('.livros').style.visibility = "hidden";
 	}
 }
