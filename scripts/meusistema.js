@@ -39,18 +39,22 @@ function addBook(){
 	}
 }
 function showBooks(){
-	let show = document.querySelector('.livros').style.display;
-	if( show == "none"){
-	 document.querySelector('.livros').style.display= "block";
+	let show = document.querySelector('.livros').style.visibility;
+	if(show == "initial"){
+		document.querySelector('.livros').style.visibility = "visible";
+	} else if (show == "visible"){
+		document.querySelector('.livros').style.visibility = "hidden";
 	} else{
-		document.querySelector('.livros').style.display = "none";
+		document.querySelector('.livros').style.visibility = "visible";
 	}
 }
 function showUsers(){
-	let show = document.querySelector('.usuarios').style.display;
-	if (show == "none"){
-		document.querySelector('.usuarios').style.display = "block";
-	} else{
-		document.querySelector('.usuarios').style.display = "none";
+	let show = document.querySelector('.usuarios').style.visibility;
+	if (show == "initial"){
+		document.querySelector('.usuarios').style.visibility = "visible";
+	} else if (show == "visible"){
+		document.querySelector('.usuarios').style.visibility = "hidden";
+	} else {
+		document.querySelector('.usuarios').style.visibility = "visible";
 	}
 }
