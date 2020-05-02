@@ -11,7 +11,7 @@ function addName(){
 	} else if (userlist.includes(val)) {
 		alert("This name is already on the system!");
 		document.querySelector('#cadastrarNome').value = "";
-	} else if(val !== undefined){
+	} else if((val !== undefined) && (val !== "")){
 
 			var tr = document.querySelector("#userTable");
 			tr.innerHTML += "<tr>\n<td>" + userID + "</td>\n<td>" + val + "</td>\n</tr>";
@@ -29,7 +29,7 @@ function addBook(){
 	}else if (booklist.includes(val)) {
 		alert("This book is already on the system!");
 		document.querySelector('#cadastrarLivro').value = "";
-	} else if(val !== undefined){
+	} else if((val !== undefined) && (val !== "")){
 
 		var tr = document.querySelector("#bookTable");
 		tr.innerHTML += "<tr>\n<td>" + bookID + "</td>\n<td>" + val + "</td>\n</tr>";
@@ -60,5 +60,15 @@ function showUsers(){
 	} else {
 		document.querySelector('.usuarios').style.visibility = "visible";
 		document.querySelector('.livros').style.visibility = "hidden";
+	}
+}
+function enterInput1(ke){
+	if((ke.keyCode == 13) || (ke.which == 13)){
+		return document.querySelector('.createBook').click();
+	}
+}
+function enterInput2(ke) {
+	if((ke.keyCode == 13) || (ke.which == 13)){
+		return document.querySelector('.createName').click();
 	}
 }

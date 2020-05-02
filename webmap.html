@@ -16,8 +16,8 @@
 			</ul>
 			</div>
 			<div class="usuarios">
-				<input type="text" id="cadastrarNome" placeholder="Nome Completo">
-				<button id="createName" onclick="addName()">Criar</button>
+				<input type="text" id="cadastrarNome" placeholder="Nome Completo" onkeypress="return enterInput2(event)">
+				<button class="createName" onclick="addName()">Criar</button>
 				<table>
 					<thead>
 						<tr>
@@ -31,8 +31,8 @@
 				</table>
 			</div>
 			<div class="livros">
-				<input type="text" id="cadastrarLivro" placeholder="Livro">
-				<button id="createBook" onclick="addBook()">Criar</button>
+				<input type="text" id="cadastrarLivro" placeholder="Livro" onkeypress="return enterInput1(event)">
+				<button class="createBook" onclick="addBook()">Criar</button>
 				<table>
 					<thead>
 						<tr>
