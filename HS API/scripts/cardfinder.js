@@ -5,7 +5,7 @@ async function findCard(){
 		alert("This name is too long!");
 		document.querySelector('#cadastrarNome').value = "";
 	} else if((val !== undefined) && (val !== "")){
-		let search = "https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/search/"+ val;
+		let search = `https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/search/${val}?collectible=1&locale=ptBR`
 		fetch(search, {
 			"method": "GET",
 			"headers": {
