@@ -1,6 +1,7 @@
-async function findCard(){
+function findCard(){
 	let val = document.querySelector('#cardSearch').value;
-	console.log(val);
+	let showCard = document.querySelector('.showCards');
+
 	if (val.length >= 20){
 		alert("This name is too long!");
 		document.querySelector('#cadastrarNome').value = "";
@@ -14,7 +15,23 @@ async function findCard(){
 			}
 		})
 		.then(response => response.json())
-  		.then(data => console.log(data))
+  		.then(data => {
+  			let cardList = [];
+  			let cardImgList = [];
+  			
+
+  			for (let i=0 ; i < data.length ; i++ ) {
+  				cardList.push(data[i].name);
+  				cardImgList.push(data[i].img);
+  			}
+  			
+  			showCard.innerHTML += `<img src=${cardImgList[0]}>`;
+  			showCard.innerHTML += `<h3>${cardList[0]}</h3>`;
+
+  			for(let i=0 ; i < cardList.lenght ; i++){
+  				showCard.innerHTML += '<h3>'+cardList[i]+'</h3>';
+  			}
+  		})
   		.catch(err =>{console.log(err);
   		});
 	}
