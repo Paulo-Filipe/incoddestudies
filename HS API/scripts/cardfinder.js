@@ -46,8 +46,9 @@ function findCard(){
 		document.querySelector('#cardSearch').value = "";
 	}
 }
-addEventListener('fetch', function(e){
-	if(!e.ok){
-		throw new Error("not 2xx!");
+
+function enterInput(ke){
+	if((ke.keyCode == 13) || (ke.which == 13)){
+		return document.querySelector('.findCard').click();
 	}
-})
+}
