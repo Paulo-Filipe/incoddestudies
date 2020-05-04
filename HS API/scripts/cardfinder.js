@@ -23,14 +23,13 @@ function findCard(){
   			for (let i=0 ; i < data.length ; i++ ) {
   				cardList.push(data[i].name);
   				cardImgList.push(data[i].img);
-  			}
+  			};
   			
-  			showCard.innerHTML += `<img src=${cardImgList[0]}>`;
-  			showCard.innerHTML += `<h3>${cardList[0]}</h3>`;
 
-  			for(let i=0 ; i < cardList.lenght ; i++){
-  				showCard.innerHTML += '<h3>'+cardList[i]+'</h3>';
-  			}
+  			for (let i=0 ; i < cardList.length ; i++) {
+  				showCard.innerHTML += `<h3>${cardList[i]}</h3>`;
+  				showCard.innerHTML += `<img src=${cardImgList[i]}>`;
+  			};
   		})
   		.catch(err =>{console.log(err);
   		});
