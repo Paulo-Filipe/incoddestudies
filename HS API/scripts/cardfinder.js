@@ -16,12 +16,12 @@ function findCard(){
 				"x-rapidapi-key": "956dfec896msha4abd84ff58f505p1dca14jsn9158346487a2"
 			}
 		})
-		.then(response => response.json()
+		.then(response => {
 			
-			/*if(search.status == 404){
+			if(!response.ok){
 				throw new Error("Not found!");
-			}else {response.json()}
-		}*/)
+			}else {return response.json()}
+		})
   		.then(data => {
   			let cardList = [];
   			let cardIds = [];
@@ -35,8 +35,10 @@ function findCard(){
   			
 
   			for (let i=0 ; i < cardList.length ; i++) {
-  				showCard.innerHTML += `<h3>${cardList[i]}</h3>`;
-  				showCard.innerHTML += `<img src="https://art.hearthstonejson.com/v1/render/latest/ptBR/512x/${cardIds[i]}.png" >`;
+  				showCard.innerHTML +=  `<div class="card">
+  											<h3>${cardList[i]}</h3>
+  											<img src="https://art.hearthstonejson.com/v1/render/latest/ptBR/512x/${cardIds[i]}.png" >
+  										</div>`
   			};
   		})
   		.catch(err =>{alert("No card found!");
@@ -44,3 +46,8 @@ function findCard(){
 		document.querySelector('#cardSearch').value = "";
 	}
 }
+addEventListener('fetch', function(e){
+	if(!e.ok){
+		throw new Error("not 2xx!");
+	}
+})
