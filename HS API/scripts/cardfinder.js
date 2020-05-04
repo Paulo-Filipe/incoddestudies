@@ -16,11 +16,17 @@ function findCard(){
 				"x-rapidapi-key": "956dfec896msha4abd84ff58f505p1dca14jsn9158346487a2"
 			}
 		})
-		.then(response => response.json())
+		.then(response => response.json()
+			
+			/*if(search.status == 404){
+				throw new Error("Not found!");
+			}else {response.json()}
+		}*/)
   		.then(data => {
   			let cardList = [];
   			let cardIds = [];
-  			
+
+  			console.log(search.status);
 
   			for (let i=0 ; i < data.length ; i++ ) {
   				cardList.push(data[i].name);
