@@ -22,6 +22,7 @@ img{
 	max-width: 60%;
 	height: auto;
 	align-items: center;
+	margin-bottom: 0px;
 }
 input{
 	border-radius: 20px;
@@ -39,6 +40,16 @@ button{
 	font-family: sans-serif;
 	color: white;
 
+}
+h6{
+	max-width: 15rem;
+	padding: 4px;
+	color: rgba(10,10,10,0.9);
+	font-size: 1em;
+	margin-top: 0px;
+}
+h3{
+	color: rgba(10,10,10,0.9);
 }
 .showCards{
 	display: grid;

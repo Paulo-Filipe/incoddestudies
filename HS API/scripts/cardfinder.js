@@ -25,12 +25,14 @@ function findCard(){
   		.then(data => {
   			let cardList = [];
   			let cardIds = [];
+  			let cardFlavor = [];
 
-  			console.log(search.status);
+  			console.log(data);
 
   			for (let i=0 ; i < data.length ; i++ ) {
   				cardList.push(data[i].name);
   				cardIds.push(data[i].cardId);
+  				cardFlavor.push(data[i].flavor);
   			};
   			
 
@@ -38,6 +40,7 @@ function findCard(){
   				showCard.innerHTML +=  `<div class="card">
   											<h3>${cardList[i]}</h3>
   											<img src="https://art.hearthstonejson.com/v1/render/latest/ptBR/512x/${cardIds[i]}.png" >
+  											<h6>${cardFlavor[i]}</h6>
   										</div>`
   			};
   		})
