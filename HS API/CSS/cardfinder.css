@@ -1,6 +1,7 @@
 body{
 	text-align: center;
 	background-color:rgba(100,100,100,0.2);
+	display: block;
 }
 h1{
 	font-size: 3rem;
@@ -13,6 +14,31 @@ h1{
 	stroke: white;
 	stroke-width: 3px;
 	text-shadow: rgba(50,50,50,0.78) 4px -1px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+}
+img{
+	max-width: 60%;
+	height: auto;
+	align-items: center;
+}
+input{
+	border-radius: 20px;
+	border-style: none;
+	padding: 6px;
+	min-width: 20rem;
+	align-self: center;
+}
+button{
+	border-radius: 20px;
+	background-color: forestgreen;
+	border-style:none;
+	padding: 5px;
+	text-decoration-style: bold;
+	font-family: sans-serif;
+	color: white;
+
 }
 .showCards{
 	display: grid;
@@ -21,10 +47,5 @@ h1{
 .card{
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-}
-img{
-	max-width: 60%;
-	height: auto;
 	align-items: center;
 }
