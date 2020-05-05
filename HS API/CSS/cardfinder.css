@@ -19,16 +19,20 @@ h1{
 	margin-left: 0px;
 }
 img{
-	max-width: 50%;
+	max-width: 60%;
 	height: auto;
 	align-items: center;
 	margin-bottom: 0px;
+}
+img:hover{
+	max-width: 80%;
+}
 }
 input{
 	border-radius: 20px;
 	border-style: none;
 	padding: 6px;
-	min-width: 20rem;
+	min-width: 30rem;
 	align-self: center;
 }
 button{
@@ -53,7 +57,7 @@ h3{
 }
 .showCards{
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .card{
 	display: flex;
