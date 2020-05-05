@@ -27,13 +27,12 @@ img{
 img:hover{
 	max-width: 80%;
 }
-}
 input{
-	border-radius: 20px;
-	border-style: none;
+	border-radius: 25px;
+	border-style: none; 
 	padding: 6px;
 	min-width: 30rem;
-	align-self: center;
+	text-align: center;
 }
 button{
 	border-radius: 20px;
@@ -43,7 +42,6 @@ button{
 	text-decoration-style: bold;
 	font-family: sans-serif;
 	color: white;
-
 }
 h6{
 	max-width: 15rem;
