@@ -1,8 +1,15 @@
 
 function getUsers(){
 
+
   let show =  document.querySelector('.showUsers');
   let search = `https://quizka-development.herokuapp.com/api/users`;
+
+  console.log(show.length);
+
+  while(show.childNodes.length > 4){
+    show.removeChild(show.lastChild);
+  }
 
   fetch(search)
   .then(response => {
@@ -25,7 +32,7 @@ function getUsers(){
     }
 
     for(let i=0; i < idsList.length; i++){
-      show.innerHTML +=`<tr>
+      show.innerHTML +=`<tr class="tableBody">
                           <td>${idsList[i]}</td>
                           <td>${usersList[i]}</td>
                           <td>${emailList[i]}</td>
@@ -59,11 +66,16 @@ function createUser(){
     },
     body: JSON.stringify(data),
     })
-    .then(response => response.json())
+    .then(response => {
+    if(!response.ok){
+        throw new Error("Not found!");
+      } else {return response.json()}
+    })
     .then(data => {
       console.log('Success:', data);
     })
     .catch((error) => {
+      alert("something went wrong!");
       console.error('Error:', error);
     });
   }
