@@ -78,7 +78,7 @@ function createUser(){
     .then(document.querySelector('#newUserLogin').value = "")
     .then(document.querySelector('#newUserPassword').value = "")
     .then(document.querySelector('#newUserEmail').value = "")
-    .then(setTimeout(getUsers(), 500))
+    .then(setTimeout(getUsers(), 1200))
     .catch((error) => {
       alert("something went wrong!");
       console.error('Error:', error);
