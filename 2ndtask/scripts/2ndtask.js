@@ -50,9 +50,10 @@ function createUser(){
   let pass = document.querySelector('#newUserPassword').value;
   let email = document.querySelector('#newUserEmail').value;
 
-  if((login == "") || (pass == "") || (email== "")){
-    return alert("é preciso fornecer login, senha e email");
+  if((login == "") || (pass == "") || (email== "") || (pass.length < 6)){
+    return alert("é preciso fornecer login, senha de pelo menos 6 caracteres e email");
   }else{
+    
     var data = {
       'username': login,
       'password': pass,
