@@ -51,9 +51,9 @@ function createUser(){
   let email = document.querySelector('#newUserEmail').value;
 
   if((login == "") || (pass == "") || (email== "") || (pass.length < 6)){
-    return alert("é preciso fornecer login, senha de pelo menos 6 caracteres e email");
+    return alert("é preciso fornecer login, senha de pelo menos 6 caracteres e email válido");
   }else{
-    
+
     var data = {
       'username': login,
       'password': pass,
@@ -80,4 +80,21 @@ function createUser(){
       console.error('Error:', error);
     });
   }
+}
+
+function deleteUser(){
+
+ let del =  document.querySelector('#deleteUser').value;
+
+ if(confirm(`tem certeza que deseja deletar ${del}?`)){
+
+  search = `https://quizka-development.herokuapp.com/api/users/${del}`
+  console.log(del);
+
+  fetch(search, {
+  method: 'DELETE',
+  })
+  .then(response => response.json())
+  .then(data => console.log(data))
+ } else {alert("usuário não deletado.")}
 }
