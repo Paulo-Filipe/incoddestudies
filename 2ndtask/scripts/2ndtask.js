@@ -75,6 +75,10 @@ function createUser(){
     .then(data => {
       console.log('Success:', data);
     })
+    .then(document.querySelector('#newUserLogin').value = "")
+    .then(document.querySelector('#newUserPassword').value = "")
+    .then(document.querySelector('#newUserEmail').value = "")
+    .then(setTimeout(getUsers(), 500))
     .catch((error) => {
       alert("something went wrong!");
       console.error('Error:', error);
@@ -94,7 +98,14 @@ function deleteUser(){
   fetch(search, {
   method: 'DELETE',
   })
-  .then(response => response.json())
+  .then(response => {
+    if(!response.ok){
+        throw new Error("Not found!");
+      } else {return response.json()}
+    })
   .then(data => console.log(data))
+  .then(getUsers())
+  .then(document.querySelector('#deleteUser').value = "")
+  .catch(err => console.error("something went wrong!"))
  } else {alert("usuário não deletado.")}
 }
