@@ -32,6 +32,8 @@ table,th,td{
 	border-radius: 15px;
 	text-align: center;
 	padding: 8px;
+	background-color: white;
+	color: rgba(10,10,10,0.5);
 }
 table{
 	min-width: 30%;
