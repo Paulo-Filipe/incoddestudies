@@ -68,15 +68,13 @@ function createUser(){
     .then(response => {
     if(!response.ok){
         throw new Error("Not found!");
-      } else {return response.json()}
+      } else {
+        document.querySelector('#newUserLogin').value = "";
+        document.querySelector('#newUserPassword').value = "";
+        document.querySelector('#newUserEmail').value = "";
+        getUsers();
+      }
     })
-    .then(data => {
-      console.log('Success:', data);
-    })
-    .then(document.querySelector('#newUserLogin').value = "")
-    .then(document.querySelector('#newUserPassword').value = "")
-    .then(document.querySelector('#newUserEmail').value = "")
-    .then(setTimeout(getUsers(), 5000))
     .catch((error) => {
       alert("something went wrong!");
       console.error('Error:', error);
@@ -99,11 +97,11 @@ function deleteUser(){
   .then(response => {
     if(!response.ok){
         throw new Error("Not found!");
-      } else {return response.json()}
-    })
-  .then(data => console.log(data))
-  .then(setTimeout(getUsers(), 5000))
-  .then(document.querySelector('#deleteUser').value = "")
+      } else {
+        getUsers();
+        document.querySelector('#deleteUser').value = "";
+      }
+  })
   .catch(err => console.error("something went wrong!"))
  } else {alert("usuário não deletado.")}
 }
