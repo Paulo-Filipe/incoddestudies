@@ -17,7 +17,6 @@ function getUsers(){
   })
   .then(data => {return data.data})
   .then(usersData =>{
-    console.log(usersData);
 
     var idsList =   [];
     var usersList = [];
