@@ -4,23 +4,23 @@
 		<title>Get, Put & Delete</title>
 		<meta charset="utf-8">
 		<script type="text/javascript" src="scripts/2ndtask.js"></script>
-		<!--<link rel="stylesheet" type="text/CSS" href="CSS/2ndtask.css">-->
+		<link rel="stylesheet" type="text/CSS" href="CSS/2ndtask.css">
 	</head>
 	<body>
-		<button class="getUsers" onclick="getUsers()"> Get Users List</button>
 		<input type="text" id="newUserLogin" placeholder="Login">
 		<input type="text" id="newUserPassword" placeholder="Senha">
 		<input type="text" id="newUserEmail" placeholder="E-mail">
-		<button class="create" onclick ="createUser()">create</button>
+		<button class="create" onclick ="createUser()">Create</button>
 		<input type="text" id="deleteUser" placeholder="Deletar usuário (coloque Id)">
 		<button class="erase" onclick="deleteUser()">Deletar</button>
+		<button class="getUsers" onclick="getUsers()"> Get Users List</button>
 
 			<table class='showUsers'>
 				<tr>
 					<thead>
-						<th>id</th>
-						<th>username</th>
-						<th>email</th>
+						<th>Id</th>
+						<th>Username</th>
+						<th>E-mail</th>
 					</thead>
 				</tr>
 			</table>

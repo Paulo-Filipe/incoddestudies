@@ -5,8 +5,6 @@ function getUsers(){
   let show =  document.querySelector('.showUsers');
   let search = `https://quizka-development.herokuapp.com/api/users`;
 
-  console.log(show.length);
-
   while(show.childNodes.length > 4){
     show.removeChild(show.lastChild);
   }
@@ -78,7 +76,7 @@ function createUser(){
     .then(document.querySelector('#newUserLogin').value = "")
     .then(document.querySelector('#newUserPassword').value = "")
     .then(document.querySelector('#newUserEmail').value = "")
-    .then(setTimeout(getUsers(), 1200))
+    .then(setTimeout(getUsers(), 5000))
     .catch((error) => {
       alert("something went wrong!");
       console.error('Error:', error);
@@ -104,7 +102,7 @@ function deleteUser(){
       } else {return response.json()}
     })
   .then(data => console.log(data))
-  .then(getUsers())
+  .then(setTimeout(getUsers(), 5000))
   .then(document.querySelector('#deleteUser').value = "")
   .catch(err => console.error("something went wrong!"))
  } else {alert("usuário não deletado.")}
